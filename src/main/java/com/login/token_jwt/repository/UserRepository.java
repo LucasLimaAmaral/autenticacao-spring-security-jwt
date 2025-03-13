@@ -1,4 +1,4 @@
-package com.login.token_jwt;
+package com.login.token_jwt.repository;
 
 import com.login.token_jwt.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;

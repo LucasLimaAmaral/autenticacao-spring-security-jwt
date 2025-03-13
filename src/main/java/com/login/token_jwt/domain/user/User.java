@@ -28,6 +28,12 @@ public class User implements UserDetails {
 
     private UserRole role;
 
+    public User(String login, String password, UserRole role) {
+        this.login = login;
+        this.password = password;
+        this.role = role;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         if(this.role == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"), new SimpleGrantedAuthority("ROLE_USER"));
@@ -59,18 +65,5 @@ public class User implements UserDetails {
         return true;
     }
 
-    public enum UserRole {
-        ADMIN("admin"),
-        USER("user");
 
-        private String role;
-
-        UserRole(String role) {
-            this.role = role;
-        }
-
-        public String getRole() {
-            return role;
-        }
-    }
 }

@@ -1,6 +1,6 @@
 package com.login.token_jwt.services;
 
-import com.login.token_jwt.UserRepository;
+import com.login.token_jwt.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,6 +1,7 @@
-package com.login.token_jwt;
+package com.login.token_jwt.services;
 
 import com.login.token_jwt.domain.user.User;
+import com.login.token_jwt.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
